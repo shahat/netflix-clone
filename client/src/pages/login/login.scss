@@ -1,0 +1,95 @@
+.login {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-image: linear-gradient(to bottom , rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%) ,url("./../../netflix-codes.webp");
+    background-image: repeat ;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    .top {
+    
+        .wrapper {
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        .logo{
+            height: 80px;
+        }  
+        .loginButton {
+            background-color: red;
+            border:none;
+            color:white;
+            border-radius: 5px;
+            padding: 5px 15px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    }
+     
+
+
+}
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+form{
+    width: 300px ;
+    height: 300px ;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    input{
+        height: 40px;   
+        border-radius: 5px;
+        background-color: gray;
+        color: white;
+        border: none;
+        padding-left: 10px;
+        &::placeholder{
+            color: lightgray;   
+
+        }
+        &:focus{
+            outline: none;
+            border: 1px solid white;
+        }
+
+    }
+    button{
+        height: 40px;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+
+    }
+    span{
+        color: lightgray;   
+        b{
+            color: white;   
+            cursor: pointer;
+            
+        }
+    }
+}
+
+}
+}

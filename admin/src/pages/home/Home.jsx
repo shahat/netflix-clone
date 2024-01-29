@@ -8,6 +8,7 @@ import { data } from "../../components/data/chart";
 import { BiParagraph } from "react-icons/bi";
 import WidgetSm from "../../components/widgetSm/WidgetSm";
 import WidgetLg from "../../components/widgetLg/WidgetLg";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const featured = [
@@ -32,6 +33,7 @@ export default function Home() {
   ];
   return (
     <div className="home">
+      <Link to="/users">users</Link>
       <h1 className="homeTitle">Home</h1>
       <div className="featuredContainer">
         <Featured featured={featured} />

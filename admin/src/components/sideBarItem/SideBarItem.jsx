@@ -1,19 +1,23 @@
-export default function SideBarItem({ sideBarItems }) {
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+export default function SideBarItem({ sideBarItem }) {
   return (
-    <>
-      {sideBarItems.map((sideItem) => (
-        <div key={sideItem.title} className="sidebarMenu">
-          <h3 className="sidebarTitle">{sideItem.title}</h3>
-          <ul className="sidebarList">
-            {sideItem.subTitle.map((subTitle, index) => (
-              <li key={index} className="sidebarListItem active">
-                {subTitle.icon}
-                {subTitle.title}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </>
+    <div className="sidebarMenu">
+      <h3 className="sidebarTitle">{sideBarItem.title}</h3>
+      <ul className="sidebarList">
+        {sideBarItem.subTitle.map((subTitle, index) => (
+          <Link to={subTitle.link} key={index} className="link">
+            <li className="sidebarListItem ">
+              {subTitle.icon}
+              {subTitle.title}
+            </li>
+          </Link>
+        ))}
+      </ul>
+    </div>
   );
 }
+
+SideBarItem.propTypes = {
+  sideBarItem: PropTypes.object.isRequired,
+};
